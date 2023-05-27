@@ -1,0 +1,3 @@
+#!/bin/bash
+python ./utils/registry.py
+git add registry.json

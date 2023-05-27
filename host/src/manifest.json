@@ -1,0 +1,6 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/osdk.manifest.component.v1",
+    "type": "exe",
+    "id": "hello-world",
+    "description": "A simple CLI application that outputs 'Hello, World!'"
+}
