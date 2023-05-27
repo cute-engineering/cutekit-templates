@@ -1,0 +1,6 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/osdk.manifest.component.v1",
+    "type": "exe",
+    "id": "kernel",
+    "description": "A simple kernel to demonstration OSDK and Limine"
+}
