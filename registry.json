@@ -1,1 +1,1 @@
-[{"id": "handover-barebone", "description": "A simple handover-compliant kernel"}, {"id": "limine-barebone", "description": "A simple Limine-compliant kernel."}, {"id": "host", "description": "A template for a simple host application written in C"}]
+[{"id": "handover-barebone", "description": "A simple handover-compliant kernel"}, {"id": "limine-barebone", "description": "A simple Limine-compliant kernel"}, {"id": "host", "description": "A template for a simple host application written in C"}]
