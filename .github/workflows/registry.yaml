@@ -1,0 +1,31 @@
+name: Generate registry
+
+on:
+    push: 
+        branches: [main]
+
+jobs:
+    generate-registry:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Install requirements
+              run: |
+                sudo apt-get update && \
+                sudo apt-get install python3
+            
+            - name: Generate registry
+              run: python .github/workflows/registry.py
+            
+            - name: Commit new registry
+              run: |
+                git config --local user.email "automation@cute.engineering"
+                git config --local user.name "cute-engineer"
+                git commit -am "chore: update registry"
+
+            - name: Push changes
+              uses: ad-m/github-push-action@master
+              with:
+                github_token: ${{ secrets.BOT_TOKEN }}
+                branch: ${{ github.ref }}
