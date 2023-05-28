@@ -64,7 +64,8 @@ def bootCmd(args: args.Args) -> None:
         '-no-shutdown',
         "-m", "4G",
         "-smp", "4",
-        "-serial", "mon:stdio"
+        "-serial", "mon:stdio",
+        "-machine", "q35",
     ]
 
     if not legacy:

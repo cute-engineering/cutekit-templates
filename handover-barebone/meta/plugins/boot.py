@@ -26,9 +26,10 @@ def bootCmd(args: args.Args) -> None:
         "qemu-system-x86_64",
         '-no-reboot',
         '-no-shutdown',
-        "-m", "256M",
+        "-m", "4G",
         "-smp", "4",
         "-serial", "mon:stdio",
+        "-machine", "q35",
         "-bios", ovmf,
         "-drive", f"file=fat:rw:{imageDir},media=disk,format=raw",
     ]
