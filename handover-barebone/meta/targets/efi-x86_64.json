@@ -1,0 +1,79 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.target.v1",
+    "id": "efi-x86_64",
+    "type": "target",
+    "props": {
+        "toolchain": "clang",
+        "arch": "x86_64",
+        "sys": "efi",
+        "abi": "ms",
+        "freestanding": false,
+        "host": false,
+        "karm-sys-encoding": "utf16",
+        "karm-sys-line-ending": "crlf",
+        "karm-sys-path-separator": "backslash"
+    },
+    "routing": {
+        "stdc-math": "stdc-math-musl"
+    },
+    "tools": {
+        "cc": {
+            "cmd": [
+                "@latest",
+                "clang"
+            ],
+            "args": [
+                "-target",
+                "x86_64-unknown-windows",
+                "-ffreestanding",
+                "-fno-stack-protector",
+                "-fshort-wchar",
+                "-mno-red-zone"
+            ]
+        },
+        "cxx": {
+            "cmd": [
+                "@latest",
+                "clang++"
+            ],
+            "args": [
+                "-target",
+                "x86_64-unknown-windows",
+                "-ffreestanding",
+                "-fno-stack-protector",
+                "-fshort-wchar",
+                "-mno-red-zone"
+            ]
+        },
+        "ld": {
+            "cmd": [
+                "@latest",
+                "clang++"
+            ],
+            "args": [
+                "-target",
+                "x86_64-unknown-windows",
+                "-nostdlib",
+                "-Wl,-entry:efi_main",
+                "-Wl,-subsystem:efi_application",
+                "-fuse-ld=lld-link"
+            ]
+        },
+        "ar": {
+            "cmd": [
+                "@latest",
+                "llvm-ar"
+            ],
+            "args": [
+                "rcs"
+            ]
+        },
+        "as": {
+            "cmd": "nasm",
+            "args": [
+                "-f",
+                "win64"
+            ]
+        }
+    }
+}

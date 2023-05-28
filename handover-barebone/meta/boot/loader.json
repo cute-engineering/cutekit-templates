@@ -1,0 +1,15 @@
+{
+    "title": "Welcome to your kernel",
+    "subtitle": "Fork it, own it, improve it !",
+    "entries": [
+        {
+            "icon": "file:///boot/icon.qoi",
+            "name": "Barebone kernel",
+            "kernel": {
+                "url": "file:///boot/kernel.elf",
+                "props": {}
+            },
+            "blobs": []
+        }
+    ]
+}

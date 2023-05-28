@@ -1,0 +1,16 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.project.v1",
+    "type": "project",
+    "id": "your-gh-handle/handover-barebone",
+    "description": "A simple handover-compliant kernel",
+    "extern": {
+        "cute-engineering/handover-spec": {
+            "git": "https://github.com/cute-engineering/handover",
+            "tag": "v1.4.0"
+        },
+        "skift-org/skift": {
+            "git": "https://github.com/skift-org/skift",
+            "tag": "main"
+        }
+    }
+}
