@@ -1,4 +1,4 @@
-from osdk import args, builder, cmds, shell
+from cutekit import args, builder, cmds, shell
 
 
 def run(_args: args.Args):

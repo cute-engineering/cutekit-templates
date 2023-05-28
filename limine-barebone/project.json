@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schemas.cute.engineering/stable/osdk.manifest.component.v1",
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.project.v1",
     "type": "project",
     "id": "your-gh-handle/limine-barebone",
     "description": "A simple Limine-compliant kernel.",

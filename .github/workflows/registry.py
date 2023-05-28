@@ -19,7 +19,7 @@ def addEntry(entry: str) -> dict:
 def main() -> None:
     registry = []
 
-    if os.path.basename(os.getcwd()) != 'osdk-template':
+    if os.path.basename(os.getcwd()) != 'cutekit-template':
         print("Please run this on the root of the repository", file=sys.stderr)
         exit(1)
 

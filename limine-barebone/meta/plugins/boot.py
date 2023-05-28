@@ -1,8 +1,9 @@
 import os
 import logging
-from osdk import args, builder, const, cmds, shell
+from cutekit import args, builder, const, cmds, shell
 
 logger = logging.getLogger(__name__)
+
 
 def kvmAvailable() -> bool:
     if os.path.exists("/dev/kvm") and os.access("/dev/kvm", os.R_OK):
@@ -44,6 +45,7 @@ def installLimineLegacy(bootDir: str) -> None:
     shell.exec(*XORRISO)
     shell.exec(*["cc", "-o", os.path.join(const.CACHE_DIR, "limine-deploy"), os.path.join(const.CACHE_DIR, "limine-deploy.c")])
     shell.exec(*[os.path.join(const.CACHE_DIR, "limine-deploy"), os.path.join(const.CACHE_DIR, "barebones.iso")])
+
 
 def bootCmd(args: args.Args) -> None:
     legacy = "legacy" in args.opts
@@ -88,5 +90,6 @@ def bootCmd(args: args.Args) -> None:
         qemu += ["-enable-kvm", "-cpu", "host"]
 
     shell.exec(*qemu)
+
 
 cmds.append(cmds.Cmd('B', 'boot', 'Boot the kernel', bootCmd))
