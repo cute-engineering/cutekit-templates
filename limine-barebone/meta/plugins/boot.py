@@ -50,7 +50,7 @@ def installLimineLegacy(bootDir: str) -> None:
 def bootCmd(args: args.Args) -> None:
     legacy = "legacy" in args.opts
 
-    imageDir = shell.mkdir(".osdk/images/barebones")
+    imageDir = shell.mkdir(os.path.join(const.PROJECT_CK_DIR, "images", "barebone"))
     bootDir = shell.mkdir(os.path.join(imageDir, "boot"))
 
     kernel = builder.build('kernel', 'kernel-x86_64')
