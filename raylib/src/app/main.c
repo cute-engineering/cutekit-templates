@@ -1,26 +1,26 @@
 #include <raylib.h>
 
-int main(int argc, char **argv) {
-  (void)argc;
-  (void)argv;
-  const int screenWidth = 800;
-  const int screenHeight = 450;
+int main(void)
+{
+    const int screenWidth = 800;
+    const int screenHeight = 450;
 
-  InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
-  SetTargetFPS(60);
-  while (!WindowShouldClose()) {
-    BeginDrawing();
+    SetTargetFPS(60);
+    while (!WindowShouldClose())
+    {
+        BeginDrawing();
 
-    ClearBackground(RAYWHITE);
+        ClearBackground(RAYWHITE);
 
-    DrawText("Congrats! \nYou created your first raylib window\nAnd built the "
-             "project using cutekit !",
-             150, 200, 20, BLACK);
+        DrawText("Congrats! \nYou created your first raylib window\nAnd built the "
+                 "project using cutekit !",
+                 150, 200, 20, BLACK);
 
-    EndDrawing();
-  }
+        EndDrawing();
+    }
 
-  CloseWindow();
-  return 0;
+    CloseWindow();
+    return 0;
 }

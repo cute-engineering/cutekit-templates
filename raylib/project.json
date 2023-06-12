@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.project.v1",
     "type": "project",
-    "id": "your-gh-handle/host",
-    "description": "A template for a simple raylib application written in C, raylib needs to be installed on your system.",
+    "id": "your-gh-handle/raylib",
+    "description": "A template for a simple raylib application written in C.",
     "extern": {}
 }
