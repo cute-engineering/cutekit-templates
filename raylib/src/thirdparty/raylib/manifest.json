@@ -1,0 +1,32 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.component.v1",
+    "id": "raylib",
+    "type": "lib",
+    "description": "A cross-platform development library designed to provide low level access to hardware",
+    "tools": {
+        "cc": {
+            "args": [
+                "@exec",
+                "pkg-config",
+                "--cflags",
+                "raylib"
+            ]
+        },
+        "cxx": {
+            "args": [
+                "@exec",
+                "pkg-config",
+                "--cflags",
+                "raylib"
+            ]
+        },
+        "ld": {
+            "args": [
+                "@exec",
+                "pkg-config",
+                "--libs",
+                "raylib"
+            ]
+        }
+    }
+}
